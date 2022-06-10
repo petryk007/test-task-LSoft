@@ -1,0 +1,83 @@
+<div class="content">
+    <span class="title">
+        token
+    </span>
+    <span class="description">
+        Create your own crypto token
+    </span>
+
+    <form  [formGroup]="createForm" (ngSubmit)="saveDraft()">
+        <div class="field-item">
+            <label for="company" class="block">Company</label>
+            <p-dropdown 
+                [options]="companyControl" 
+                formControlName="company" 
+                placeholder="Select a company"
+            >
+            </p-dropdown>
+        </div>
+        <div class="field-item">
+            <label for="tokenName" class="block">Token name</label>
+            <input 
+                type="text" 
+                pInputText
+                formControlName="tokenName"
+                [class.invalid]="f.tokenName.errors?.required"
+            />
+            <small *ngIf="f.tokenName.errors?.required"  id="username2-help" class="p-error block">Invalid data</small>
+        </div>
+        <div class="field-item">
+            <label for="symbol" class="block">Symbol</label>
+            <input 
+                type="text" 
+                pInputText 
+                formControlName="symbol" 
+                [class.invalid]="f.symbol.errors?.required"
+            />
+            <small *ngIf="f.symbol.errors?.required"  id="username2-help" class="p-error block">Invalid data</small>
+        </div>
+        <div class="field-item">
+            <label for="maximumTokenSupply" class="block">Maximum token supply</label>
+            <p-inputNumber 
+                formControlName="maximumTokenSupply"
+                [class.invalid]="f.maximumTokenSupply.errors?.required"
+            >
+            </p-inputNumber>
+            <small *ngIf="f.maximumTokenSupply.errors?.required"  id="username2-help" class="p-error block">Invalid data</small>
+        </div>
+        <div class="field-item radiobutton">
+            <label for="blockchainControl">Blockchain</label>
+            <div class="field-radiobutton">
+                <p-selectButton 
+                    [options]="blockchainControl" 
+                    formControlName="blockchain" 
+                >
+                </p-selectButton>
+            </div>
+            <div class="field-item checkbox">
+                <label for="supply">Supply</label>
+                <div class="checkbox-block">
+                    <p-checkbox formControlName="supply" [binary]="true" inputId="binary"></p-checkbox>
+                    <label for="binary">{{ createForm.get('supply').value ? 'Enabled' : 'Disabled' }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div 
+            class="submit-btn-block"
+            pTooltip="Fill in all fields"
+            [tooltipDisabled]="createForm.valid"
+        >
+            <button 
+                pButton 
+                pRipple 
+                type="submit" 
+                label="SAVE DRAFT" 
+                [disabled]="createForm.invalid"
+                class="submit-btn p-button-rounded p-button-danger"
+            >
+            </button>
+        </div>
+        
+    </form>
+</div>

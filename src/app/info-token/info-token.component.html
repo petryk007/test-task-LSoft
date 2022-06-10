@@ -1,0 +1,35 @@
+<div class="content">
+    <span class="title">
+        token
+    </span>
+    <span class="description">
+        Create your own crypto token
+    </span>
+
+    <div class="info-block" *ngIf="ObjInfo" >
+        <div class="field-item">
+            <label for="company" class="block">Company:</label>
+            <span>{{ ObjInfo['company'] }}</span>
+        </div>
+        <div class="field-item">
+            <label for="tokenName" class="block">Token name:</label>
+            <span>{{ ObjInfo['tokenName'] }}</span>
+        </div>
+        <div class="field-item">
+            <label for="symbol" class="block">Symbol:</label>
+            <span>{{ ObjInfo['symbol'] }}</span>
+        </div>
+        <div class="field-item">
+            <label for="maximumTokenSupply" class="block">Maximum token supply:</label>
+            <span>{{ ObjInfo['maximumTokenSupply'] }}</span>
+        </div>
+        <div class="field-item">
+            <label for="blockchain" class="block">Blockchain:</label>
+            <span>{{ ObjInfo['blockchain'] }}</span>
+        </div>
+        <div class="field-item">
+            <label for="supply" class="block">Supply:</label>
+            <span>{{ ObjInfo['supply'] ? 'Enabled' : 'Disabled' }}</span>
+        </div>
+    </div>
+</div>

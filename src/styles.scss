@@ -1,1 +1,149 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/primeng/resources/themes/saga-blue/theme.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeicons/primeicons.css";
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.logo {
+    position: absolute;
+    display: flex;
+    width: 122px;
+    height: 50.7px;
+    left: 111px;
+    top: 48px;
+
+    .text-logo {
+        display: flex;
+        flex-direction: column;
+        margin: 0.3em 0.5em;
+        // font-family: 'Roboto';
+        // font-style: normal;
+
+        .text-up {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.03em;
+            color: #48588D;
+            text-transform: capitalize;
+        }
+
+        .text-down {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            letter-spacing: 0.2em;
+            color: #ACACAC;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.content {
+    margin-top: 175px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 84px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .description {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    form {
+        margin-top: 25px;
+        width: 450px;
+        
+
+        .field-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25em;
+
+            .invalid {
+                border-color: #D32F2F;
+                color: #D32F2F;
+            }
+
+            label {
+                color: #727272;
+            }
+
+            .field-radiobutton {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            input {
+                height: 28px;
+                border: 1px solid #BBBBBB;
+                border-radius: 8px;
+                padding: 0 5px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 14px;
+                display: flex;
+                align-items: center;
+            }
+
+            .checkbox-block {
+                label {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .submit-btn-block {
+            width: fit-content;
+            
+            .submit-btn:disabled {
+                pointer-events: none;
+            }
+        }
+
+        .checkbox, 
+        .radiobutton {
+            margin-top: 15px;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 222px);
+    margin: 0 111px;
+    bottom: 30px;
+
+    .block-btn {
+        a {
+            margin: 0 15px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #000000;
+            text-decoration: none !important;
+        }
+    }
+}
+
+
+

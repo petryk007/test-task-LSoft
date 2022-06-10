@@ -1,0 +1,18 @@
+.info-block {
+    width: 320px;
+    margin-top: 15px;
+
+    .field-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        label {
+            color: #666666;
+        }
+
+        span {
+            border-bottom: 1px dashed;
+        }
+    }
+}
